@@ -57,7 +57,7 @@ function updateCharts(data) {
             type: 'bar', // 类型设置为条形图
             barCategoryGap: '40%', // 条形之间的间距
             itemStyle: {
-                color: '#d1250d',
+                color: '#43d5d0',
                 borderRadius: [0, 10, 10, 0] // 圆角
             },
             label: { show: true, position: 'right' } // 显示标签
@@ -81,15 +81,15 @@ function updateCharts(data) {
                 lineStyle: {
                     width: 20,  // 轴线的宽度
                     color: [
-                        [0.2, '#6bcf85'],  // 绿色，值在0-2000之间时显示
-                        [0.8, '#4f98ca'],  // 蓝色，值在2000-8000之间时显示
-                        [1, '#f45b5b']     // 红色，值在8000-10000之间时显示
+                        [0.2, '#3883c1'],  // 绿色，值在0-2000之间时显示
+                        [0.8, '#ba43cc'],  // 蓝色，值在2000-8000之间时显示
+                        [1, '#60f45b']     // 红色，值在8000-10000之间时显示
                     ]
                 }
             },
             pointer: {
                 width: 6,          // 指针的宽度
-                length: '70%',     // 指针的长度
+                length: '80%',     // 指针的长度
                 color: 'auto'      // 自动根据数据变化设置指针颜色
             },
             detail: {
@@ -111,16 +111,6 @@ function updateCharts(data) {
     exposureGauge.setOption(gaugeOption, true);
 }
 
-// 动态填充表格内容
-function fillTable(data) {
-    const tableBody = document.getElementById('titleTableBody');
-    tableBody.innerHTML = ''; // 清空之前的表格内容
-    data.titleName.forEach((title, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `<td>${title}</td><td>${data.titleCount[index]}</td>`;
-        tableBody.appendChild(row);
-    });
-}
 
 // 处理 WebSocket 错误
 socket.onerror = function(event) {

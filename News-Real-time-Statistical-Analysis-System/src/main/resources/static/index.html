@@ -11,36 +11,14 @@
 
 <h1 class="text-center">搜狗热门话题数据统计</h1>
 
-<!-- GitHub 链接 -->
-<div class="github-link-container">
-  <a href="https://github.com/NanBei090/News-Real-time-Statistical-Analysis-System.git" target="_blank" class="github-link">GitHub 仓库</a>
+
+<!-- 图表并排容器 -->
+<div class="chart-row">
+  <!-- 柱状图 -->
+  <div id="titleChart" class="chart-container bar-chart"></div>
+  <!-- 仪表盘 -->
+  <div id="topicGauge" class="chart-container gauge-chart"></div>
 </div>
-
-<!-- 小标题和柱状图 -->
-<h2 class="section-title">话题曝光量柱状图</h2>
-<div id="titleChart" class="chart-container"></div>
-
-<!-- 小标题和仪表盘 -->
-<h2 class="section-title">话题曝光量仪表盘</h2>
-<div id="topicGauge" class="chart-container"></div>
-
-<!-- 小标题和表格 -->
-<h2 class="section-title">话题曝光量数据表</h2>
-<table class="table table-bordered">
-  <thead>
-  <tr>
-    <th>标题</th>
-    <th>曝光量</th>
-  </tr>
-  </thead>
-  <tbody id="titleTableBody"></tbody>
-</table>
-
-<!-- 作者信息 -->
-<footer class="footer">
-  <p>作者: nanbei</p>
-  <p>创作时间：2024-11-24</p>
-</footer>
 
 <script src="js/chart.js"></script>
 </body>

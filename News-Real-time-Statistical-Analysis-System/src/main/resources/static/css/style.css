@@ -19,31 +19,11 @@ h1.text-center {
     font-size: 24px;
 }
 
-/* 小标题样式 */
-.section-title {
-    font-size: 20px; /* 设置小标题的字体大小 */
-    font-weight: bold; /* 小标题加粗 */
-    color: #333; /* 小标题颜色 */
-    margin-top: 40px; /* 小标题与上方内容的间距 */
-    margin-bottom: 10px; /* 小标题与下方内容的间距 */
-    text-align: center; /* 小标题居中 */
-}
-
-/* 页脚样式 */
-.footer {
-    text-align: center; /* 居中 */
-    font-size: 14px; /* 设置字体大小 */
-    color: #777; /* 字体颜色 */
-    margin-top: 40px; /* 与内容保持距离 */
-    padding: 20px 0; /* 上下内边距 */
-    background-color: #f4f4f4; /* 背景色 */
-}
 
 /* 图表容器样式 */
 .chart-container {
-    width: 80%; /* 图表宽度占80% */
+    width: 100%; /* 图表容器宽度为100% */
     height: 400px; /* 高度400px */
-    margin-bottom: 20px;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -51,30 +31,20 @@ h1.text-center {
     box-sizing: border-box; /* 包括内边距和边框 */
 }
 
-/* 表格样式 */
-table {
-    width: 80%; /* 表格宽度占80% */
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-    box-sizing: border-box; /* 包括边框 */
+/* 将柱状图和仪表盘放在同一行 */
+.chart-row {
+    display: flex;
+    justify-content: space-between; /* 元素之间均匀分布 */
+    width: 80%; /* 总宽度80% */
+    margin-top: 20px; /* 距离顶部的间距 */
+    margin-bottom: 20px; /* 距离底部的间距 */
 }
 
-/* 表头和表格内容的样式 */
-table th, table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left; /* 表格内容居中 */
+/* 每个图表容器（柱状图和仪表盘）的宽度 */
+.chart-container.bar-chart {
+    width: 48%; /* 使柱状图容器宽度为48% */
 }
 
-table th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-}
-
-/* 响应式设计：当屏幕小于 600px 时，调整图表和表格宽度 */
-@media (max-width: 600px) {
-    .chart-container, table {
-        width: 95%; /* 图表和表格宽度为95% */
-    }
+.chart-container.gauge-chart {
+    width: 48%; /* 使仪表盘容器宽度为48% */
 }
